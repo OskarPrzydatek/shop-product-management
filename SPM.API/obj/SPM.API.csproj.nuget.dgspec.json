@@ -25,7 +25,17 @@
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Core/SPM.Core.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Core/SPM.Core.csproj"
+              },
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj"
+              },
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -38,6 +48,20 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.2.3, )"
@@ -57,6 +81,205 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/oprzydatek/DotNet/SPM.API/SPM.Core/SPM.Core.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/oprzydatek/DotNet/SPM.API/SPM.Core/SPM.Core.csproj",
+        "projectName": "SPM.Core",
+        "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Core/SPM.Core.csproj",
+        "packagesPath": "/home/oprzydatek/.nuget/packages/",
+        "outputPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Core/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/oprzydatek/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj"
+              },
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj",
+        "projectName": "SPM.Infrastructure",
+        "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj",
+        "packagesPath": "/home/oprzydatek/.nuget/packages/",
+        "outputPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/oprzydatek/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj": {
+                "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            },
+            "Microsoft.EntityFrameworkCore.Sqlite": {
+              "target": "Package",
+              "version": "[6.0.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/share/dotnet/sdk/6.0.300/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj",
+        "projectName": "SPM.Tests",
+        "projectPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj",
+        "packagesPath": "/home/oprzydatek/.nuget/packages/",
+        "outputPath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/oprzydatek/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.1.0, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.2, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.1, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

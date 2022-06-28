@@ -6,4 +6,9 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <ItemGroup>
+      <ProjectReference Include="..\SPM.Infrastructure\SPM.Infrastructure.csproj" />
+      <ProjectReference Include="..\SPM.Tests\SPM.Tests.csproj" />
+    </ItemGroup>
+
 </Project>
