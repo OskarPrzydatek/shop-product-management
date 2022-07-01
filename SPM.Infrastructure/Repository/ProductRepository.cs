@@ -44,7 +44,7 @@ public class ProductRepository : IProductRepository
 
         try
         {
-            if (productExist)
+            if (!productExist)
             {
                 await _mainContext.AddAsync(entity);
                 await _mainContext.SaveChangesAsync();
@@ -68,7 +68,7 @@ public class ProductRepository : IProductRepository
                 productToUpdate.Id = entity.Id;
                 productToUpdate.Name = entity.Name;
                 productToUpdate.Price = entity.Price;
-
+                productToUpdate.CopiesSold = entity.CopiesSold;
 
                 await _mainContext.SaveChangesAsync();
             }
