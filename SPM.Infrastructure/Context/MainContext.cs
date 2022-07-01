@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using SPM.Infrastructure.Entities;
 
 namespace SPM.Infrastructure.Context;
 

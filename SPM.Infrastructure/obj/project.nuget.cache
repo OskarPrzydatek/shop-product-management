@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PlOlQSxgkjmMJTBPcSE2ZFAMKFjrxiVUExle4aDV3dchPD6oIl5mewmdlByctDCuOoUMImWeqlO0BXw9S/QerQ==",
+  "dgSpecHash": "MdTg76CL4yF7iyc9M3spfKs9BDj3IMDhj8ZWLzqlxSWvN29cVeDknXystzIGh0IOgzGejJiRGWz0ue58BQHGeQ==",
   "success": true,
   "projectFilePath": "/home/oprzydatek/DotNet/SPM.API/SPM.Infrastructure/SPM.Infrastructure.csproj",
   "expectedPackageFiles": [

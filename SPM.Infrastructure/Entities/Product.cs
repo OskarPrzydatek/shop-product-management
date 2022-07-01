@@ -1,4 +1,4 @@
-namespace SPM.Infrastructure;
+namespace SPM.Infrastructure.Entities;
 
 public class Product : BaseEntity
 {

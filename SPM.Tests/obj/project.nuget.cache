@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "QQplqOLRmF7jgemt/I7k6t37dFXVKGTQTTDucs7tUdWtHS3oEq5WZMPLq01NreIXtlZ/J20U/BdViAzOtR/fsQ==",
+  "dgSpecHash": "8TIvAgTlv65XpjST8m+9cc27uojxxrbuKuwQ6lhI9M53SZkd6sU68SK84c5yr6U8CoPGgsIkIkjyDEMzm8W+fw==",
   "success": true,
   "projectFilePath": "/home/oprzydatek/DotNet/SPM.API/SPM.Tests/SPM.Tests.csproj",
   "expectedPackageFiles": [
