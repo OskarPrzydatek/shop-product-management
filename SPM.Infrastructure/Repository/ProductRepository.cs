@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using SPM.Infrastructure.Context;
 using SPM.Infrastructure.Entities;
+using SPM.Infrastructure.Exception;
 
 namespace SPM.Infrastructure.Repository;
 
@@ -14,8 +15,6 @@ public class ProductRepository : IProductRepository
     // ReSharper disable once ContextualLoggerProblem
     public ProductRepository(MainContext mainContext, ILogger<IProductRepository>? logger = null)
     {
-        if (logger == null) throw new ArgumentNullException(nameof(logger));
-
         _mainContext = mainContext ?? throw new ArgumentNullException(nameof(mainContext));
         _logger = logger ?? throw new ArgumentNullException(nameof(logger));
     }
@@ -25,6 +24,7 @@ public class ProductRepository : IProductRepository
     {
         var products = await (_mainContext.Product ?? throw new InvalidOperationException("DB Context not found"))
             .ToListAsync();
+        
         return products;
     }
 
@@ -32,9 +32,15 @@ public class ProductRepository : IProductRepository
     {
         var product =
             await (_mainContext.Product ?? throw new InvalidOperationException("Db Context not found"))
-                .SingleOrDefaultAsync(product =>
-                    product.Id == id);
-        return product ?? throw new InvalidOperationException("Invalid GetById operation");
+                .SingleOrDefaultAsync(product => product.Id == id);
+
+        if (product != null)
+        {
+            return product;
+        }
+
+        _logger.LogError("Invalid GetById operation - can't find id = {ProductId:guid}", id);
+        throw new ProductNotFoundException("No product found");
     }
 
     public async Task Add(Product entity)
@@ -52,7 +58,7 @@ public class ProductRepository : IProductRepository
         }
         catch
         {
-            throw new Exception("Product already exist in database");
+            throw new ProductNotFoundException("Product already exist in database");
         }
     }
 
@@ -75,7 +81,8 @@ public class ProductRepository : IProductRepository
         }
         catch
         {
-            throw new Exception("Product doesn't exist in database");
+            _logger.LogError("Invalid GetById operation - can't find id = {ProductId:guid}", entity.Id);
+            throw new ProductNotFoundException("Product doesn't exist in database");
         }
     }
 
@@ -94,7 +101,8 @@ public class ProductRepository : IProductRepository
         }
         catch
         {
-            throw new Exception("Product doesn't exist in database");
+            _logger.LogError("Invalid GetById operation - can't find id = {ProductId}", id);
+            throw new ProductNotFoundException("Product doesn't exist in database");
         }
     }
 }
